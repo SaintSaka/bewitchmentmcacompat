@@ -35,7 +35,7 @@ import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import org.jetbrains.annotations.Nullable;
-import moriyashiine.bewitchment.common.entity.MCA;
+import moriyashiine.bewitchment.common.entity.MCA.EntityVillagerMCA;
 
 
 @SuppressWarnings("ConstantConditions")
