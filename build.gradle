@@ -58,7 +58,7 @@ dependencies {
     mappings "net.fabricmc:yarn:${yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${loader_version}"
     // https://mvnrepository.com/artifact/com.demonwav.mcdev/annotations
-    implementation "com.demonwav.mcdev:annotations:2.1.0"
+    modimplementation "com.demonwav.mcdev:annotations:2.1.0"
 
     modApi "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${cardinal_components_version}"
     modApi "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${cardinal_components_version}"
