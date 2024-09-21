@@ -1,4 +1,4 @@
-package com.reyzerbit.mca_reborn.common.entities;
+package com.moriyashiine.bewitchment.common.entity.MCAreborn;
 
 public class EntityVillagerMCA {
 	
