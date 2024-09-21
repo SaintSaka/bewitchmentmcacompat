@@ -35,7 +35,27 @@ import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import org.jetbrains.annotations.Nullable;
-import mca.entity.EntityVillagerMCA;
+import com.reyzerbit.mca_reborn.common.entities;
+import com.reyzerbit.mca_reborn.api.API;
+import com.reyzerbit.mca_reborn.api.types.APIButton;
+import com.reyzerbit.mca_reborn.common.Constants;
+import com.reyzerbit.mca_reborn.common.MCA;
+import com.reyzerbit.mca_reborn.common.data.MCAInventory;
+import com.reyzerbit.mca_reborn.common.data.ParentData;
+import com.reyzerbit.mca_reborn.common.data.PlayerHistory;
+import com.reyzerbit.mca_reborn.common.enums.EnumAgeState;
+import com.reyzerbit.mca_reborn.common.enums.EnumChore;
+import com.reyzerbit.mca_reborn.common.enums.EnumConstraint;
+import com.reyzerbit.mca_reborn.common.enums.EnumGender;
+import com.reyzerbit.mca_reborn.common.enums.EnumMarriageState;
+import com.reyzerbit.mca_reborn.common.enums.EnumMoveState;
+import com.reyzerbit.mca_reborn.common.init.EntityInit;
+import com.reyzerbit.mca_reborn.common.init.VillagerInit;
+import com.reyzerbit.mca_reborn.common.util.MCAConfig;
+import com.reyzerbit.mca_reborn.common.util.ResourceLocationCache;
+import com.reyzerbit.mca_reborn.network.MCAMessages;
+import com.reyzerbit.mca_reborn.network.Network;
+
 
 @SuppressWarnings("ConstantConditions")
 public class WerewolfEntity extends BWHostileEntity {
