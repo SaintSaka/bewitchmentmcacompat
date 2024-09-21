@@ -142,7 +142,7 @@ public class WerewolfEntity extends BWHostileEntity {
             storedVillager = villagerNbt;
         }
         
-        NbtCompound mcaNbt = EntityType.MCA.create(world).writeNbt(new NbtCompound());
+        NbtCompound mcaNbt = EntityType.VillagerMCA.create(world).writeNbt(new NbtCompound());
         if (mcaNbt != null) {
             storedVillager = mcaNbt; // Isso sobrescreve storedVillager, considere se isso é o desejado
         }
