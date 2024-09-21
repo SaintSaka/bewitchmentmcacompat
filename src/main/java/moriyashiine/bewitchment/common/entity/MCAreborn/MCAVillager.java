@@ -1,4 +1,4 @@
-package com.reyzerbit.mca_reborn.common.entities;
+package com.moriyashiine.bewitchment.common.entity.MCAreborn;
 
 import java.util.ArrayList;
 import java.util.Collections;
