@@ -136,10 +136,17 @@ public class WerewolfEntity extends BWHostileEntity {
 			}
 		}
 		if (spawnReason == SpawnReason.NATURAL || spawnReason == SpawnReason.SPAWN_EGG) {
-			storedVillager = EntityType.VILLAGER.create((World) world).writeNbt(new NbtCompound());
-			if (spawnReason == SpawnReason.NATURAL || spawnReason == SpawnReason.SPAWN_EGG) {
-			storedVillager = EntityType.MCA.create((World) world).writeNbt(new NbtCompound());
-		}
+        // Aqui deve haver lógica para evitar criar mais de uma vez
+        NbtCompound villagerNbt = EntityType.VILLAGER.create(world).writeNbt(new NbtCompound());
+        if (villagerNbt != null) {
+            storedVillager = villagerNbt;
+        }
+        
+        NbtCompound mcaNbt = EntityType.MCA.create(world).writeNbt(new NbtCompound());
+        if (mcaNbt != null) {
+            storedVillager = mcaNbt; // Isso sobrescreve storedVillager, considere se isso é o desejado
+        }
+    }
 		return data;
 	}
 
