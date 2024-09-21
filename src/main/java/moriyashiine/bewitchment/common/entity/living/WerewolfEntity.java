@@ -66,7 +66,7 @@ public class WerewolfEntity extends BWHostileEntity {
 			}
 			if (storedVillager != null && age % 20 == 0 && (getWorld().isDay() || BewitchmentAPI.getMoonPhase(getWorld()) != 0)) {
 				VillagerEntity entity = EntityType.VILLAGER.create(getWorld());
-				EntityVillagerMCA entity = EntityType.VillagerMCA.create(getWorld());
+				EntityVillagerMCA entity = EntityType.EntityVillagerMCA.create(getWorld());
 				if (entity != null) {
 					PlayerLookup.tracking(this).forEach(trackingPlayer -> SpawnSmokeParticlesPacket.send(trackingPlayer, this));
 					getWorld().playSound(null, getX(), getY(), getZ(), BWSoundEvents.ENTITY_GENERIC_TRANSFORM, getSoundCategory(), getSoundVolume(), getSoundPitch());
@@ -142,7 +142,7 @@ public class WerewolfEntity extends BWHostileEntity {
             storedVillager = villagerNbt;
         }
         
-        NbtCompound mcaNbt = EntityType.VillagerMCA.create(world).writeNbt(new NbtCompound());
+        NbtCompound mcaNbt = EntityType.EntityVillagerMCA.create(world).writeNbt(new NbtCompound());
         if (mcaNbt != null) {
             storedVillager = mcaNbt; // Isso sobrescreve storedVillager, considere se isso é o desejado
         }
